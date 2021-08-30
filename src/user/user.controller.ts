@@ -35,17 +35,24 @@ export class UserController {
   }
 
   @Get('/update/:id')
-  updaetUserUI() {
-    return 'updating';
+  @Render('user/update')
+  async updaetUserUI(@Param('id') id: string) {
+    const user = await this.userService.getUser(id);
+
+    return { user };
   }
 
   @Post('/update/:id')
-  updateUser() {
-    return 'updated';
+  @Redirect('/user', 301)
+  updateUser(@Param('id') id: string, @Body() user: ICreateUser) {
+    return this.userService.updateUser(id, user);
   }
 
   @Get('/:id')
-  getUser(@Param('id') id: string) {
-    return this.userService.getUser(id);
+  @Render('user/user')
+  async getUser(@Param('id') id: string) {
+    const user = await this.userService.getUser(id);
+
+    return { user };
   }
 }

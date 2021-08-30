@@ -1,0 +1,11 @@
+html(lang="en")
+  head 
+    title Update user
+  style
+  body
+    h1 User #{user.id}
+    form(method="POST" action="")
+      input(type="text" name="firstName" value=user.firstName)
+      input(type="text" name="lastName" value=user.lastName)
+      input(type="number" name="age" value=user.age)
+      button(type="submit") Update

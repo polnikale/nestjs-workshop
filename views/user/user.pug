@@ -1,0 +1,10 @@
+html(lang="en")
+  head 
+    title List of users
+  style
+  body
+    h1 User #{user.id}
+    h2 #{user.firstName} #{user.lastName}
+    h5 #{user.age ? `Age is ${user.age}` : 'No age'}
+    <a href="update/#{user.id}">Update</a>
+    

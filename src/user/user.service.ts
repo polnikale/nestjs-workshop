@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
-import { ICreateUser, IUser } from './user.interface';
+import { ICreateUser } from './user.interface';
 
 @Injectable()
 export class UserService {
@@ -18,9 +18,12 @@ export class UserService {
     return await this.provider.user.findUnique({ where: { id } });
   }
 
-  public async updateUser(id: string, data: IUser) {
+  public async updateUser(id: string, data: ICreateUser) {
     this.logger.log('Updating');
-    return await this.provider.user.update({ where: { id }, data });
+    return await this.provider.user.update({
+      where: { id },
+      data: { ...data, age: data.age ? Number(data.age) : null },
+    });
   }
 
   public async createUser(data: ICreateUser) {
