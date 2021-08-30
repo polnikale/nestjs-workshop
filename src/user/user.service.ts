@@ -25,6 +25,8 @@ export class UserService {
 
   public async createUser(data: ICreateUser) {
     this.logger.log('Creating');
-    return await this.provider.user.create({ data });
+    return await this.provider.user.create({
+      data: { ...data, age: data.age ? Number(data.age) : null },
+    });
   }
 }

@@ -11,5 +11,5 @@ export interface IUser {
 export interface ICreateUser {
   firstName: string;
   lastName: string;
-  age?: number;
+  age?: string;
 }
