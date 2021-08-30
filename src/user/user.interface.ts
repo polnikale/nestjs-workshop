@@ -7,3 +7,9 @@ export interface IUser {
 
   createdAt: Date;
 }
+
+export interface ICreateUser {
+  firstName: string;
+  lastName: string;
+  age?: number;
+}
