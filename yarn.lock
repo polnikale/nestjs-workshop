@@ -700,6 +700,20 @@
     consola "^2.15.0"
     node-fetch "^2.6.1"
 
+"@paljs/plugins@^3.8.2":
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/@paljs/plugins/-/plugins-3.8.2.tgz#5f4ade5a3e0a25a33e3f911960e2cb133b4daa3d"
+  integrity sha512-9V7FArQVDPMicVRn6q9gg0v3OKUnKICx65Dya/LSc/ECSNJ/zmUHhqLBf/lWj0INje7V6FCyedjPU8gLfD7Bug==
+  dependencies:
+    "@paljs/types" "^3.6.1"
+    graphql-fields "2.0.3"
+    graphql-tag "2.12.5"
+
+"@paljs/types@^3.6.1":
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/@paljs/types/-/types-3.6.1.tgz#e5851c360c37b838ec3fbae3c67cd2b06e103ac5"
+  integrity sha512-JTANdJCA8ErEW31x1d5q2A+sp5UZJIbN88AP8WN6zA5v5APJzgf/ub4tqYIrhpaiWOSoAa3YMfM3DIg+PYwEVw==
+
 "@prisma/client@^2.30.1":
   version "2.30.1"
   resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.30.1.tgz#31073ce86971af11eb8000a649dfebb5bb09ad07"
@@ -2616,6 +2630,18 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4:
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
+
+graphql-fields@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/graphql-fields/-/graphql-fields-2.0.3.tgz#5e68dff7afbb202be4f4f40623e983b22c96ab8f"
+  integrity sha512-x3VE5lUcR4XCOxPIqaO4CE+bTK8u6gVouOdpQX9+EKHr+scqtK5Pp/l8nIGqIpN1TUlkKE6jDCCycm/WtLRAwA==
+
+graphql-tag@2.12.5:
+  version "2.12.5"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.12.5.tgz#5cff974a67b417747d05c8d9f5f3cb4495d0db8f"
+  integrity sha512-5xNhP4063d16Pz3HBtKprutsPrmHZi5IdUGOWRxA2B6VF7BIRGOHZ5WQvDmJXZuPcBg7rYwaFxvQYjqkSdR3TQ==
+  dependencies:
+    tslib "^2.1.0"
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -4955,6 +4981,11 @@ tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
+
+tslib@^2.1.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 tslib@~2.1.0:
   version "2.1.0"
