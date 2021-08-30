@@ -15,12 +15,15 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Get('/')
-  getUsers() {
-    return this.userService.getUsers();
+  @Render('user/list')
+  async getUsers() {
+    const users = await this.userService.getUsers();
+
+    return { users };
   }
 
   @Get('/create')
-  @Render('create')
+  @Render('user/create')
   createUserUI() {
     return;
   }
