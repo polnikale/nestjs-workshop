@@ -7,7 +7,7 @@ import {
   Redirect,
   Render,
 } from '@nestjs/common';
-import { ICreateUser } from './user.interface';
+import { CreateUserDTO } from './user.interface';
 import { UserService } from './user.service';
 
 @Controller('user')
@@ -30,7 +30,7 @@ export class UserController {
 
   @Post('/create')
   @Redirect('/user', 301)
-  createUser(@Body() user: ICreateUser) {
+  createUser(@Body() user: CreateUserDTO) {
     return this.userService.createUser(user);
   }
 
@@ -44,7 +44,8 @@ export class UserController {
 
   @Post('/update/:id')
   @Redirect('/user', 301)
-  updateUser(@Param('id') id: string, @Body() user: ICreateUser) {
+  updateUser(@Param('id') id: string, @Body() user: CreateUserDTO) {
+    console.log('user', user);
     return this.userService.updateUser(id, user);
   }
 
