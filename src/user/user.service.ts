@@ -1,10 +1,13 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Inject, Injectable, Logger } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
 import { ICreateUser } from './user.interface';
 
 @Injectable()
 export class UserService {
-  constructor(private provider: PrismaService, private logger: Logger) {
+  constructor(
+    @Inject('provider') private provider: PrismaService,
+    private logger: Logger,
+  ) {
     this.logger.log(`Init`);
   }
 
