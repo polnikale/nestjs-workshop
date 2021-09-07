@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { PrismaService } from '../prisma.service';
+import { SpreadsheetService } from '../spreadsheet.service';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
 
@@ -7,8 +7,12 @@ import { UserService } from './user.service';
   imports: [],
   controllers: [UserController],
   providers: [
-    { provide: 'provider', useClass: PrismaService },
-    // PrismaService,
+    {
+      provide: 'provider',
+      useValue: new SpreadsheetService(
+        '1pu5Nua7KZ47WniWxOG-aVnLm7mmf9wyhvKRje1mxVYk',
+      ),
+    },
     UserService,
   ],
 })

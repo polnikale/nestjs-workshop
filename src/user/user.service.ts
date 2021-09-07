@@ -8,12 +8,12 @@ export class UserService {
     @Inject('provider') private provider: PrismaService,
     private logger: Logger,
   ) {
-    this.logger.log(`Init`);
+    this.logger.log(`Init ${JSON.stringify(this.provider)}`);
   }
 
   public async getUsers() {
-    this.logger.log(`Getting users`);
-    return await this.provider.user.findMany();
+    const users = await this.provider.user.findMany();
+    return users;
   }
 
   public async getUser(id: string) {
