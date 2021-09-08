@@ -1,0 +1,11 @@
+html(lang="en")
+  head 
+    title Create user
+  style
+  body
+    h1 New User
+    form(method="POST" action="/user/create")
+      input(type="text" name="firstName")
+      input(type="text" name="lastName")
+      input(type="number" name="age")
+      button(type="submit") Create
